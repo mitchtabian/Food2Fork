@@ -6,16 +6,13 @@ import uuid
 
 
 def default_featured_image_filepath(self, filename):
-	return f'featured_images/{str(self.recipe_id)}/featured_image.png'
+	return f'featured_images/{str(self.pk)}/featured_image.png'
 
 def default_featured_image():
 	return "food2fork/default_featured_image.png"
 
 class Recipe(models.Model):
 
-	# unique ID of the recipe
-	recipe_id				= models.UUIDField(primary_key=True, default=uuid.uuid4)
-	
 	# title of a recipe
 	title					= models.CharField(max_length=250, null=False, blank=False)
 
