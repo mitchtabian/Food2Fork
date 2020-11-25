@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config("DEBUG")
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ["food2fork.ca"]
+ALLOWED_HOSTS = ["165.22.180.72", "food2fork.ca"]
 
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # During development only
