@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config("DEBUG")
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
@@ -42,6 +42,7 @@ AUTHENTICATION_BACKENDS = (
 INSTALLED_APPS = [
     'account',
     'personal',
+    'recipe',
 
     'django.contrib.admin',
     'django.contrib.auth',

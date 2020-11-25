@@ -1,5 +1,6 @@
 Django==2.2.15
+Pillow==8.0.1
 psycopg2==2.8.6
+python-decouple==3.3
 pytz==2020.4
 sqlparse==0.4.1
-python-decouple==3.3
