@@ -1,0 +1,4 @@
+Django==2.2.15
+psycopg2==2.8.6
+pytz==2020.4
+sqlparse==0.4.1
