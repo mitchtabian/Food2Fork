@@ -26,7 +26,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ["165.22.180.72", "food2fork.ca"]
+ALLOWED_HOSTS = ["165.22.180.72", "food2fork.ca", "www.food2fork.ca"]
 
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # During development only
@@ -42,6 +42,7 @@ AUTHENTICATION_BACKENDS = (
 INSTALLED_APPS = [
     'account',
     'personal',
+    'recipe',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -61,7 +62,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Food2Fork.urls'
+ROOT_URLCONF = f'{config("PROJECT_NAME")}.urls'
 
 TEMPLATES = [
     {
