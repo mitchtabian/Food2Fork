@@ -72,8 +72,9 @@ def recipe_get(request, *args, **kwargs):
 			recipe = Recipe.objects.get(pk=rId)
 		except Recipe.DoesNotExist:
 			return Response(ApiRecipeResponse.RECIPE_DOES_NOT_EXIST.value, status=status.HTTP_404_NOT_FOUND)
-		return Response(RecipeSerializer(recipe).data)
+		return Response(RecipeSerializer(recipe, context={'request': request}).data)
 	return Response(ApiRecipeResponse.UNKNOWN_ERROR.value, status=status.HTTP_400_BAD_REQUEST)
+
 
 
 
