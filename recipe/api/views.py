@@ -4,10 +4,16 @@ from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
+from django.db.models import Q
+
+import operator
+from functools import reduce 
 
 from recipe.api.serializers import RecipeSerializer
 from recipe.models import Recipe
 
+
+from itertools import chain
 
 @api_view(['GET', ])
 @permission_classes((IsAuthenticated, ))
@@ -17,21 +23,27 @@ def recipe_search(request, *args, **kwargs):
 	See [/recipe/api/documentation.md] for more information.
 	"""
 	q = request.GET.get("query")
-	print(f"Q: {q}")
 	data = []
 	try:
-		recipes = Recipe.objects.filter(
-			title__icontains=str(q),
-		)
-		# .filter(
-		# 	publisher__username__icontains=q,
-		# ).filter(
-		# 	description__icontains=q, 
-		# )
-		# .filter(
-		# 	ingredients__icontains=q,
-		# )
-		for recipe in recipes:
+		queries = q.split(" ")
+		results = []
+		for query in queries:
+			result = Recipe.objects.filter(
+				Q(title__icontains=query) 
+				| Q(publisher__username__icontains=query)
+				| Q(description__icontains=query)
+				| Q(ingredients__icontains=query)
+			)
+			results.append(result)
+
+		# Flatten the list of querysets into a single list
+		results = list(chain.from_iterable(results))
+
+		# Ensure the list items are unique
+		results = list(set(results))
+
+		# Serialize
+		for recipe in results:
 			data.append(RecipeSerializer(recipe).data)
 		return Response(data)
 	except Exception as e:
