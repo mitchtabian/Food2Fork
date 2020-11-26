@@ -33,8 +33,8 @@ class RecipeSerializer(serializers.ModelSerializer):
 	def get_featured_image(self, recipe):
 		request = self.context.get('request')
 		url = recipe.featured_image.url
-		if "?" in url:
-			url = recipe.featured_image.url[:recipe.featured_image.url.rfind("?")]
+		# if "?" in url:
+		# 	url = recipe.featured_image.url[:recipe.featured_image.url.rfind("?")]
 		return request.build_absolute_uri(url)
 
 	def humanize_date_added(self, recipe):
