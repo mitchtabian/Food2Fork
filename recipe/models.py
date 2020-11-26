@@ -35,7 +35,7 @@ class Recipe(models.Model):
 	description 			= models.CharField(max_length=500, blank=False, null=False)
 
 	# Instructions for cooking the recipe
-	cooking_intructions 	= models.TextField(blank=True, null=True)
+	cooking_instructions 	= models.TextField(blank=True, null=True)
 
 	# List of ingredients
 	"""
