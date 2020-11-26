@@ -4,6 +4,9 @@ from django.core.files.storage import FileSystemStorage
 from django.conf import settings
 import os
 
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
 
 
 class MyAccountManager(BaseUserManager):
@@ -64,6 +67,13 @@ class Account(AbstractBaseUser):
 		return True
 
 
+@receiver(post_save, sender=Account)
+def create_auth_token(sender, instance=None, created=False, **kwargs):
+	"""
+	Create a token if a user does not have one already.
+	"""
+	Token.objects.get_or_create(user=instance)
+	
 
 
 
