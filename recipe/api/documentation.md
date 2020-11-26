@@ -2,16 +2,26 @@
 1. [Searching for recipes](#Search-Recipes)
 1. [Find by Recipe ID](#Find-by-Recipe-ID)
 
+<br>
 
-## Search Recipes
+# Search Recipes
 Keyword search for recipes.
 
-##### GET `https://food2fork.ca/api/recipe/search/?page=2&query=beef carrot potato onion`
+<br>
+
+#### GET 
+```
+https://food2fork.ca/api/recipe/search/?page=2&query=beef carrot potato onion
+```
+
+<br>
 
 #### Headers
 | Key | Value |
 |-----|-------|
 | Authorization | Token 9c8b06d329136da358c2d00e76946b0111ce2c48|
+
+<br>
 
 #### Success Response
 ```json
@@ -65,10 +75,11 @@ Keyword search for recipes.
 		"date_added": "2020-11-25T23:58:35.240032Z",
 		"date_updated": "2020-11-25T23:58:35.239712Z"
 		},
-    // More results ... 
 	]
 }
 ```
+
+<br>
 
 #### No Results
 ```json
@@ -80,24 +91,33 @@ Keyword search for recipes.
 }
 ```
 
+<br>
+
 #### Failure
 ```
 <Exception message>
 ```
 
+<br>
 
-
-## Find by Recipe ID
+# Find by Recipe ID
 Find a specific recipe by referencing its unique id.
 
+<br>
 
-##### GET `https://food2fork.ca/api/recipe/get/?id=9`
+#### GET 
+```
+https://food2fork.ca/api/recipe/get/?id=9
+```
+
+<br>
 
 #### Headers
 | Key | Value |
 |-----|-------|
 | Authorization | Token 9c8b06d329136da358c2d00e76946b0111ce2c48|
 
+<br>
 
 #### Success Response
 ```json
@@ -125,6 +145,7 @@ Find a specific recipe by referencing its unique id.
 }
 ```
 
+<br>
 
 #### Failure
 ```

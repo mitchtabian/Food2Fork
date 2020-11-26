@@ -52,8 +52,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'markdownify',
 
 ]
+
+MARKDOWNIFY_MARKDOWN_EXTENSIONS = [
+    'markdown.extensions.extra', 
+    'markdown.extensions.tables', 
+    ]
+
+MARKDOWNIFY_BLEACH = False
+MARKDOWNIFY_LINKIFY_SKIP_TAGS = ['pre', 'code', ]
+MARKDOWNIFY_LINKIFY_TEXT = True
+MARKDOWNIFY_STRIP = False
+
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
