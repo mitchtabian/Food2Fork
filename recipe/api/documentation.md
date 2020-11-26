@@ -26,55 +26,56 @@ https://food2fork.ca/api/recipe/search/?page=2&query=beef carrot potato onion
 #### Success Response
 ```json
 {
-    "count": 44,
-    "next": "https://food2fork.ca/api/recipe/search/?page=3&query=beef+carrot+potato+onion",
-    "previous": "https://food2fork.ca/api/recipe/search/?query=beef+carrot+potato+onion",
+    "count": 118,
+    "next": "http://127.0.0.1:8000/api/recipe/search/?page=3&query=beef+carrot+potato+onion",
+    "previous": "http://127.0.0.1:8000/api/recipe/search/?query=beef+carrot+potato+onion",
     "results": [
-
-		{
-			"pk": 2050,
-			"title": "Chicken, sweet potato &amp; coconut curry",
-			"publisher": "jessica",
-			"featured_image": "https://food2fork.ca//media/featured_images/2050/featured_image.png",
-			"rating": 50,
-			"source_url": "http://www.bbcgoodfood.com/recipes/1555/chicken-sweet-potato-and-coconut-curry",
-			"description": "N/A",
-			"cooking_instructions": null,
-			"ingredients": {
-				"175g frozen peas": "",
-				"300ml chicken stock": "",
-				"1 tbsp sunflower oil": "",
-				"2 tsp mild curry paste": "",
-				"400ml can coconut milk": "",
-				"4 tbsp red split lentils": "",
-				"2 medium-sized sweet potatoes , peeled and cut into bite-size pieces": "",
-				"2 large boneless, skinless chicken breasts , cut into bite-size pieces": ""
-			},
-			"date_added": "2020-11-26T00:07:32.114943Z",
-			"date_updated": "2020-11-26T00:07:32.114403Z"
-		},
-		{
-			"pk": 9,
-			"title": "Avocado Egg Salad",
-			"publisher": "maizy",
-			"featured_image": "https://food2fork.ca/media/featured_images/9/featured_image.png",
-			"rating": 69,
-			"source_url": "http://www.twopeasandtheirpod.com/avocado-egg-salad/",
-			"description": "N/A",
-			"cooking_instructions": null,
-			"ingredients": {
-				"1/4 teaspoon Dijon mustard": "",
-				"2 hard boiled eggs, chopped": "",
-				"1 tablespoon fresh lemon juice": "",
-				"2 hard boiled egg whites, chopped": "",
-				"2 tablespoons chopped green onion": "",
-				"2 small avocados, pitted and peeled": "",
-				"Salt and freshly ground black pepper, to taste": "",
-				"1 tablespoon plain Greek yogurt (we use Chobani)": ""
-			},
-		"date_added": "2020-11-25T23:58:35.240032Z",
-		"date_updated": "2020-11-25T23:58:35.239712Z"
-		},
+        {
+            "pk": 583,
+            "title": "Pizza Potato Skins",
+            "publisher": "mitch",
+            "featured_image": "http://127.0.0.1:8000/media/featured_images/583/featured_image.png",
+            "rating": 16,
+            "source_url": "http://thepioneerwoman.com/cooking/2013/04/pizza-potato-skins/",
+            "description": "N/A",
+            "cooking_instructions": null,
+            "ingredients": {
+                "Canola Oil": "",
+                "Kosher Salt": "",
+                "Butter, Melted": "",
+                "Diced Pepperoni": "",
+                "Minced Fresh Parsley": "",
+                "Grated Mozzarella Cheese": "",
+                "8 whole Small Russet Potatoes": "",
+                "Jarred Marinara Or Pizza Sauce": "",
+                "Miscellaneous Pizza Toppings: Cooked Sausage, Cooked Hamburger, Diced Bell Pepper, Diced Onion, Diced Mushrooms, Diced Canadian Bacon, Etc.": ""
+            },
+            "date_added": "2020-11-25",
+            "date_updated": "2020-11-25"
+        },
+        {
+            "pk": 584,
+            "title": "Loaded Sweet Potato Nachos",
+            "publisher": "mitch",
+            "featured_image": "http://127.0.0.1:8000/media/featured_images/584/featured_image.png",
+            "rating": 9,
+            "source_url": "http://www.twopeasandtheirpod.com/loaded-sweet-potato-nachos/",
+            "description": "N/A",
+            "cooking_instructions": null,
+            "ingredients": {
+                "1 tablespoon olive oil": "",
+                "1/4 cup chopped cilantro": "",
+                "Salt and pepper, to taste": "",
+                "Sour cream or Greek yogurt": "",
+                "1/4 cup chopped green onions": "",
+                "1 1/2 cups shredded Cheddar cheese": "",
+                "1 cup black beans, drained and rinsed": "",
+                "1 large avocado, pit removed and diced": "",
+                "3 large sweet potatoes, washed and sliced into 1/4-inch rounds": ""
+            },
+            "date_added": "2020-11-25",
+            "date_updated": "2020-11-25"
+        },
 	]
 }
 ```
@@ -122,26 +123,27 @@ https://food2fork.ca/api/recipe/get/?id=9
 #### Success Response
 ```json
 {
-    "pk": 9,
-    "title": "Avocado Egg Salad",
-    "publisher": "maizy",
-    "featured_image": "https://food2fork.ca//media/featured_images/9/featured_image.png",
-    "rating": 69,
-    "source_url": "http://www.twopeasandtheirpod.com/avocado-egg-salad/",
+    "pk": 583,
+    "title": "Pizza Potato Skins",
+    "publisher": "mitch",
+    "featured_image": "http://127.0.0.1:8000/media/featured_images/583/featured_image.png",
+    "rating": 16,
+    "source_url": "http://thepioneerwoman.com/cooking/2013/04/pizza-potato-skins/",
     "description": "N/A",
     "cooking_instructions": null,
     "ingredients": {
-        "1/4 teaspoon Dijon mustard": "",
-        "2 hard boiled eggs, chopped": "",
-        "1 tablespoon fresh lemon juice": "",
-        "2 hard boiled egg whites, chopped": "",
-        "2 tablespoons chopped green onion": "",
-        "2 small avocados, pitted and peeled": "",
-        "Salt and freshly ground black pepper, to taste": "",
-        "1 tablespoon plain Greek yogurt (we use Chobani)": ""
+        "Canola Oil": "",
+        "Kosher Salt": "",
+        "Butter, Melted": "",
+        "Diced Pepperoni": "",
+        "Minced Fresh Parsley": "",
+        "Grated Mozzarella Cheese": "",
+        "8 whole Small Russet Potatoes": "",
+        "Jarred Marinara Or Pizza Sauce": "",
+        "Miscellaneous Pizza Toppings: Cooked Sausage, Cooked Hamburger, Diced Bell Pepper, Diced Onion, Diced Mushrooms, Diced Canadian Bacon, Etc.": ""
     },
-    "date_added": "2020-11-25T23:58:35.240032Z",
-    "date_updated": "2020-11-25T23:58:35.239712Z"
+    "date_added": "2020-11-25",
+    "date_updated": "2020-11-25"
 }
 ```
 
