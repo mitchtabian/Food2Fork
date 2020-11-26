@@ -31,6 +31,7 @@ def recipe_search(request, *args, **kwargs):
 				| Q(description__icontains=query)
 				| Q(ingredients__icontains=query)
 			)
+
 			results.append(result)
 
 		# Flatten the list of querysets into a single list
