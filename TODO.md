@@ -1,12 +1,11 @@
 # TODO
-1. Rest api
-	1. build it
-	1. Setup token auth but use a single token for now. In the future I might want to limit this.
-	
+1. Get the data on the website
+	1. Work on get request for single recipe given an id
+1. build home page describing the api
+1. Write documentation
 
 
 # Prod
-1. pip install djangorestframework
 1. 
 
 

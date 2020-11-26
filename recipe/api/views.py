@@ -9,8 +9,8 @@ from django.db.models import Q
 from itertools import chain
 
 from recipe.api.serializers import RecipeSerializer
+from recipe.api.constants import ApiRecipeResponse
 from recipe.models import Recipe
-
 
 @api_view(['GET', ])
 @permission_classes((IsAuthenticated, ))
@@ -49,6 +49,28 @@ def recipe_search(request, *args, **kwargs):
 
 	
 
+@api_view(['GET', ])
+@permission_classes((IsAuthenticated, ))
+def recipe_get(request, *args, **kwargs):
+	"""
+	Get a single recipe given the id (pk).
+	See [/recipe/api/documentation.md] for more information.
+	"""
+	rId = request.GET.get("id")
+
+	if rId == None or rId == "":
+		return Response(ApiRecipeResponse.INVALID_RECIPE_ID.value, status=status.HTTP_400_BAD_REQUEST)
+	else:
+		try:
+			rId = int(rId)
+		except ValueError:
+			return Response(ApiRecipeResponse.INTEGER_RECIPE_ID.value, status=status.HTTP_400_BAD_REQUEST)
+		try:
+			recipe = Recipe.objects.get(pk=rId)
+		except Recipe.DoesNotExist:
+			return Response(ApiRecipeResponse.RECIPE_DOES_NOT_EXIST.value, status=status.HTTP_404_NOT_FOUND)
+		return Response(RecipeSerializer(recipe).data)
+	return Response(ApiRecipeResponse.UNKNOWN_ERROR.value, status=status.HTTP_400_BAD_REQUEST)
 
 
 
