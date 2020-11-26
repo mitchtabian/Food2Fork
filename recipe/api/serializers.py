@@ -1,11 +1,15 @@
 from rest_framework import serializers
 
+from datetime import datetime
+
 from recipe.models import Recipe
 
 class RecipeSerializer(serializers.ModelSerializer):
 
 	publisher = serializers.SerializerMethodField('get_username_from_publisher')
 	featured_image 	 = serializers.SerializerMethodField('get_featured_image')
+	date_added = serializers.SerializerMethodField('humanize_date_added')
+	date_updated = serializers.SerializerMethodField('humanize_date_updated')
 
 	class Meta:
 		model = Recipe
@@ -29,6 +33,11 @@ class RecipeSerializer(serializers.ModelSerializer):
 	def get_featured_image(self, recipe):
 		return recipe.get_featured_image_url()
 
+	def humanize_date_added(self, recipe):
+		return recipe.date_added.strftime("%Y-%m-%d")
+
+	def humanize_date_updated(self, recipe):
+		return recipe.date_updated.strftime("%Y-%m-%d")
 
 
 
