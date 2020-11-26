@@ -27,6 +27,10 @@ urlpatterns = [
 	path('admin/', admin.site.urls),
 	path('', home_screen_view, name='home'),
     path('recipe/', include('recipe.urls', namespace='recipe')),
+
+    # REST FRAMEWORK
+    path('api/recipe/', include('recipe.api.urls', 'recipe-api')),
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
