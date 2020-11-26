@@ -9,39 +9,11 @@
 		<h5 class="mr-3 font-weight-normal justify-content-start">
 			<a class="p-2 text-dark" href="{% url 'home' %}">Food2Fork</a>
 		</h5>
-		<form class="search-bar justify-content-start" onsubmit="return executeQuery();">
-			<input type="text" class="form-control" name="q" id="id_q_large" placeholder="Search...">
-		</form>
 	</div>
 	<!-- END MEDIUM+ SCREENS -->
 
-	<!-- SMALL SCREENS -->
-	<div class="d-flex d-md-none flex-column my-auto align-items-center">
-		<h5 class="font-weight-normal">
-		<a class="p-2 text-dark" href="{% url 'home' %}">Food2Fork</a>
-		</h5>
-		<form class="search-bar justify-content-start" onsubmit="return executeQuery();">
-			<input type="text" class="form-control" name="q" id="id_q_small" placeholder="Search...">
-		</form>
-	</div>
-	<!-- END SMALL SCREENS -->
 </div>
 
-<script type="text/javascript">
-	
-
-	function executeQuery() {
-		var query = ""
-		query = document.getElementById('id_q_small').value;
-		if (query == ""){
-			query = document.getElementById('id_q_large').value;
-		}
-	    window.location.replace("{% url 'search' %}?q=" + query)
-	    return false
-	}
-
-
-</script>
 
 
 

@@ -26,7 +26,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ["food2fork.ca", "www.food2fork.ca"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # During development only
@@ -52,8 +52,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'markdownify',
 
 ]
+
+MARKDOWNIFY_MARKDOWN_EXTENSIONS = [
+    'markdown.extensions.extra', 
+    'markdown.extensions.tables', 
+    ]
+
+MARKDOWNIFY_BLEACH = False
+MARKDOWNIFY_LINKIFY_SKIP_TAGS = ['pre', 'code', ]
+MARKDOWNIFY_LINKIFY_TEXT = True
+MARKDOWNIFY_STRIP = False
+
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',

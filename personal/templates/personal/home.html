@@ -1,18 +1,19 @@
+{% extends 'base.html' %}
+
+{% load markdownify %}
+
 {% block content %}
 
 
-<div class="container-fluid">
-	<div class="d-flex flex-row justify-content-center">
-		{% for recipe in recipes %}
-		<p>--------------------------------------</p>
-		<p>--------------------------------------</p>
-		<p>{{recipe.id}}</p>
-			<div class="mb-4">
-				<img src="{{recipe.featured_image.url}}" class="img-fluid mx-auto" style="max-width:300px; ">
-			</div>
-		{% endfor %}
+<div class="container">
+	<div class="d-flex flex-column">
+		
+		<p id="id_documentation">{{documentation|markdownify}}</p>
+		
 	</div>
 </div>
+
+
 
 
 {% endblock content %}
