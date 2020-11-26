@@ -177,6 +177,7 @@ else:
     AWS_S3_ENDPOINT_URL = config('AWS_S3_ENDPOINT_URL')
     AWS_S3_OBJECT_PARAMETERS = {
         'CacheControl': 'max-age=86400',
+        'ACL': 'public-read',
     }
     AWS_LOCATION = config('AWS_LOCATION')
 
