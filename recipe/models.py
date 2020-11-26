@@ -56,9 +56,6 @@ class Recipe(models.Model):
 	def __str__(self):
 		return self.title
 
-	def get_featured_image_url(self):
-		return f"{settings.BASE_URL}{self.featured_image.url}"
-
 
 
 

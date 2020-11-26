@@ -31,7 +31,8 @@ class RecipeSerializer(serializers.ModelSerializer):
 		return recipe.publisher.username
 
 	def get_featured_image(self, recipe):
-		return recipe.get_featured_image_url()
+		request = self.context.get('request')
+		return request.build_absolute_uri(recipe.featured_image.url)
 
 	def humanize_date_added(self, recipe):
 		return recipe.date_added.strftime("%Y-%m-%d")
