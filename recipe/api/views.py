@@ -4,6 +4,7 @@ from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.settings import api_settings
 from django.db.models import Q
 
 from itertools import chain
@@ -40,10 +41,11 @@ def recipe_search(request, *args, **kwargs):
 		# Ensure the list items are unique
 		results = list(set(results))
 
-		# Serialize
-		for recipe in results:
-			data.append(RecipeSerializer(recipe).data)
-		return Response(data)
+		pagination_class = api_settings.DEFAULT_PAGINATION_CLASS
+		paginator = pagination_class()
+		page = paginator.paginate_queryset(results, request)
+		serializer = RecipeSerializer(page, many=True)
+		return paginator.get_paginated_response(serializer.data)
 	except Exception as e:
 		return Response(str(e), status=status.HTTP_400_BAD_REQUEST)
 	
