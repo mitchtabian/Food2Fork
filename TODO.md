@@ -6,7 +6,6 @@
 
 
 # Prod
-1. pip3 install requests wget
 1. 
 
 
