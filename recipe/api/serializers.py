@@ -5,6 +5,7 @@ from recipe.models import Recipe
 class RecipeSerializer(serializers.ModelSerializer):
 
 	publisher = serializers.SerializerMethodField('get_username_from_publisher')
+	featured_image 	 = serializers.SerializerMethodField('get_featured_image')
 
 	class Meta:
 		model = Recipe
@@ -12,7 +13,7 @@ class RecipeSerializer(serializers.ModelSerializer):
 			'pk', 
 			'title', 
 			'publisher',
-			'featured_image', 
+			'featured_image',
 			'rating', 
 			'source_url', 
 			'description', 
@@ -25,7 +26,8 @@ class RecipeSerializer(serializers.ModelSerializer):
 	def get_username_from_publisher(self, recipe):
 		return recipe.publisher.username
 
-
+	def get_featured_image(self, recipe):
+		return recipe.get_featured_image_url()
 
 
 
