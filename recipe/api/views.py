@@ -44,7 +44,7 @@ def recipe_search(request, *args, **kwargs):
 		pagination_class = api_settings.DEFAULT_PAGINATION_CLASS
 		paginator = pagination_class()
 		page = paginator.paginate_queryset(results, request)
-		serializer = RecipeSerializer(page, many=True)
+		serializer = RecipeSerializer(page, many=True, context={'request': request})
 		return paginator.get_paginated_response(serializer.data)
 	except Exception as e:
 		return Response(str(e), status=status.HTTP_400_BAD_REQUEST)
