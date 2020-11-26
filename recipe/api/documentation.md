@@ -1,8 +1,9 @@
+# Endpoints
 1. [Searching for recipes](#Search-Recipes)
 1. [Find by Recipe ID](#Find-by-Recipe-ID)
 
 
-# Search Recipes
+## Search Recipes
 Keyword search for recipes.
 
 ##### GET `https://food2fork.ca/api/recipe/search/?query=chicken`
@@ -70,7 +71,7 @@ Keyword search for recipes.
 
 
 
-# Find by Recipe ID
+## Find by Recipe ID
 Find a specific recipe by referencing its unique id.
 
 
