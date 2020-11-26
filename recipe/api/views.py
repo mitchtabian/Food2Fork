@@ -6,14 +6,11 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from django.db.models import Q
 
-import operator
-from functools import reduce 
+from itertools import chain
 
 from recipe.api.serializers import RecipeSerializer
 from recipe.models import Recipe
 
-
-from itertools import chain
 
 @api_view(['GET', ])
 @permission_classes((IsAuthenticated, ))
