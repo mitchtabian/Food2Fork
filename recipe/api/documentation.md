@@ -23,6 +23,11 @@ https://food2fork.ca/api/recipe/search/?page=2&query=beef carrot potato onion
 
 <br>
 
+#### Pagination
+Page size = 30
+
+<br>
+
 #### Success Response
 ```json
 {
