@@ -39,10 +39,10 @@ class RecipeSerializer(serializers.ModelSerializer):
 		return request.build_absolute_uri(url)
 
 	def format_date_added(self, recipe):
-		return recipe.date_added.strftime("%A, %B %m %Y")
+		return recipe.date_added.strftime("%B %m %Y")
 
 	def format_date_updated(self, recipe):
-		return recipe.date_updated.strftime("%A, %B %m %Y")
+		return recipe.date_updated.strftime("%B %m %Y")
 
 
 
