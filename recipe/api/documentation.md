@@ -55,8 +55,8 @@ Page size = 30
                 "Jarred Marinara Or Pizza Sauce",
                 "Miscellaneous Pizza Toppings: Cooked Sausage, Cooked Hamburger, Diced Bell Pepper, Diced Onion, Diced Mushrooms, Diced Canadian Bacon, Etc."
             ],
-            "date_added": "2020-11-25",
-            "date_updated": "2020-11-25"
+            "date_added": "November 11 2020",
+            "date_updated": "November 11 2020"
         },
         {
             "pk": 584,
@@ -78,8 +78,8 @@ Page size = 30
                 "1 large avocado, pit removed and diced",
                 "3 large sweet potatoes, washed and sliced into 1/4-inch rounds"
             ],
-            "date_added": "2020-11-25",
-            "date_updated": "2020-11-25"
+            "date_added": "November 11 2020",
+            "date_updated": "November 11 2020"
         },
 	]
 }
@@ -147,8 +147,8 @@ https://food2fork.ca/api/recipe/get/?id=9
         "Jarred Marinara Or Pizza Sauce",
         "Miscellaneous Pizza Toppings: Cooked Sausage, Cooked Hamburger, Diced Bell Pepper, Diced Onion, Diced Mushrooms, Diced Canadian Bacon, Etc."
     ],
-    "date_added": "2020-11-25",
-    "date_updated": "2020-11-25"
+    "date_added": "November 11 2020",
+    "date_updated": "November 11 2020"
 }
 ```
 
