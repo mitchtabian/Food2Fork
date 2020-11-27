@@ -9,8 +9,8 @@ class RecipeSerializer(serializers.ModelSerializer):
 
 	publisher = serializers.SerializerMethodField('get_username_from_publisher')
 	featured_image 	 = serializers.SerializerMethodField('get_featured_image')
-	date_added = serializers.SerializerMethodField('humanize_date_added')
-	date_updated = serializers.SerializerMethodField('humanize_date_updated')
+	date_added = serializers.SerializerMethodField('format_date_added')
+	date_updated = serializers.SerializerMethodField('format_date_updated')
 
 	class Meta:
 		model = Recipe
@@ -38,11 +38,11 @@ class RecipeSerializer(serializers.ModelSerializer):
 			url = recipe.featured_image.url[:recipe.featured_image.url.rfind("?")]
 		return request.build_absolute_uri(url)
 
-	def humanize_date_added(self, recipe):
-		return recipe.date_added.strftime("%Y-%m-%d")
+	def format_date_added(self, recipe):
+		return recipe.date_added.strftime("%A, %B %m %Y")
 
-	def humanize_date_updated(self, recipe):
-		return recipe.date_updated.strftime("%Y-%m-%d")
+	def format_date_updated(self, recipe):
+		return recipe.date_updated.strftime("%A, %B %m %Y")
 
 
 
