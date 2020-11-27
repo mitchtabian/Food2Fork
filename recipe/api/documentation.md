@@ -39,17 +39,17 @@ https://food2fork.ca/api/recipe/search/?page=2&query=beef carrot potato onion
             "source_url": "http://thepioneerwoman.com/cooking/2013/04/pizza-potato-skins/",
             "description": "N/A",
             "cooking_instructions": null,
-            "ingredients": {
-                "Canola Oil": "",
-                "Kosher Salt": "",
-                "Butter, Melted": "",
-                "Diced Pepperoni": "",
-                "Minced Fresh Parsley": "",
-                "Grated Mozzarella Cheese": "",
-                "8 whole Small Russet Potatoes": "",
-                "Jarred Marinara Or Pizza Sauce": "",
-                "Miscellaneous Pizza Toppings: Cooked Sausage, Cooked Hamburger, Diced Bell Pepper, Diced Onion, Diced Mushrooms, Diced Canadian Bacon, Etc.": ""
-            },
+            "ingredients": [
+                "Canola Oil",
+                "Kosher Salt",
+                "Butter, Melted",
+                "Diced Pepperoni",
+                "Minced Fresh Parsley",
+                "Grated Mozzarella Cheese",
+                "8 whole Small Russet Potatoes",
+                "Jarred Marinara Or Pizza Sauce",
+                "Miscellaneous Pizza Toppings: Cooked Sausage, Cooked Hamburger, Diced Bell Pepper, Diced Onion, Diced Mushrooms, Diced Canadian Bacon, Etc."
+            ],
             "date_added": "2020-11-25",
             "date_updated": "2020-11-25"
         },
@@ -62,17 +62,17 @@ https://food2fork.ca/api/recipe/search/?page=2&query=beef carrot potato onion
             "source_url": "http://www.twopeasandtheirpod.com/loaded-sweet-potato-nachos/",
             "description": "N/A",
             "cooking_instructions": null,
-            "ingredients": {
-                "1 tablespoon olive oil": "",
-                "1/4 cup chopped cilantro": "",
-                "Salt and pepper, to taste": "",
-                "Sour cream or Greek yogurt": "",
-                "1/4 cup chopped green onions": "",
-                "1 1/2 cups shredded Cheddar cheese": "",
-                "1 cup black beans, drained and rinsed": "",
-                "1 large avocado, pit removed and diced": "",
-                "3 large sweet potatoes, washed and sliced into 1/4-inch rounds": ""
-            },
+            "ingredients": [
+                "1 tablespoon olive oil",
+                "1/4 cup chopped cilantro",
+                "Salt and pepper, to taste",
+                "Sour cream or Greek yogurt",
+                "1/4 cup chopped green onions",
+                "1 1/2 cups shredded Cheddar cheese",
+                "1 cup black beans, drained and rinsed",
+                "1 large avocado, pit removed and diced",
+                "3 large sweet potatoes, washed and sliced into 1/4-inch rounds"
+            ],
             "date_added": "2020-11-25",
             "date_updated": "2020-11-25"
         },
@@ -131,17 +131,17 @@ https://food2fork.ca/api/recipe/get/?id=9
     "source_url": "http://thepioneerwoman.com/cooking/2013/04/pizza-potato-skins/",
     "description": "N/A",
     "cooking_instructions": null,
-    "ingredients": {
-        "Canola Oil": "",
-        "Kosher Salt": "",
-        "Butter, Melted": "",
-        "Diced Pepperoni": "",
-        "Minced Fresh Parsley": "",
-        "Grated Mozzarella Cheese": "",
-        "8 whole Small Russet Potatoes": "",
-        "Jarred Marinara Or Pizza Sauce": "",
-        "Miscellaneous Pizza Toppings: Cooked Sausage, Cooked Hamburger, Diced Bell Pepper, Diced Onion, Diced Mushrooms, Diced Canadian Bacon, Etc.": ""
-    },
+    "ingredients": [
+        "Canola Oil",
+        "Kosher Salt",
+        "Butter, Melted",
+        "Diced Pepperoni",
+        "Minced Fresh Parsley",
+        "Grated Mozzarella Cheese",
+        "8 whole Small Russet Potatoes",
+        "Jarred Marinara Or Pizza Sauce",
+        "Miscellaneous Pizza Toppings: Cooked Sausage, Cooked Hamburger, Diced Bell Pepper, Diced Onion, Diced Mushrooms, Diced Canadian Bacon, Etc."
+    ],
     "date_added": "2020-11-25",
     "date_updated": "2020-11-25"
 }
