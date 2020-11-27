@@ -1,8 +1,9 @@
 from django.db import models
-from django.contrib.postgres.fields import JSONField
 from django.conf import settings
 from django.core.validators import MaxValueValidator, MinValueValidator
 import uuid
+
+from django.contrib.postgres.fields import ArrayField
 
 
 def default_featured_image_filepath(self, filename):
@@ -38,14 +39,7 @@ class Recipe(models.Model):
 	cooking_instructions 	= models.TextField(blank=True, null=True)
 
 	# List of ingredients
-	"""
-	{
-		"Butter": "2 tablespoons",
-		"Milk": "250ml",
-		...
-	}
-	"""
-	ingredients 			= JSONField()
+	ingredients 			= ArrayField(models.CharField(max_length=50, blank=True, ), default=[])
 
 	# Date the recipe was field published
 	date_added 				= models.DateTimeField(auto_now_add=True)
