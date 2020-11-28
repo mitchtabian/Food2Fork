@@ -56,7 +56,7 @@ Page size = 30
                 "Miscellaneous Pizza Toppings: Cooked Sausage, Cooked Hamburger, Diced Bell Pepper, Diced Onion, Diced Mushrooms, Diced Canadian Bacon, Etc."
             ],
             "date_added": "November 11 2020",
-            "date_updated": "November 11 2020"
+            "date_updated": "November 11 2020"	
         },
         {
             "pk": 584,
