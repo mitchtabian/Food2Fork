@@ -33,13 +33,13 @@ Page size = 30
 {
     "count": 118,
     "next": "http://127.0.0.1:8000/api/recipe/search/?page=3&query=beef+carrot+potato+onion",
-    "previous": "http://127.0.0.1:8000/api/recipe/search/?query=beef+carrot+potato+onion",
+    "previous": "https://food2fork.ca/api/recipe/search/?query=beef+carrot+potato+onion",
     "results": [
         {
             "pk": 583,
             "title": "Pizza Potato Skins",
             "publisher": "mitch",
-            "featured_image": "http://127.0.0.1:8000/media/featured_images/583/featured_image.png",
+            "featured_image": "https://nyc3.digitaloceanspaces.com/food2fork/food2fork-static/featured_images/583/featured_image.png",
             "rating": 16,
             "source_url": "http://thepioneerwoman.com/cooking/2013/04/pizza-potato-skins/",
             "description": "N/A",
@@ -56,13 +56,13 @@ Page size = 30
                 "Miscellaneous Pizza Toppings: Cooked Sausage, Cooked Hamburger, Diced Bell Pepper, Diced Onion, Diced Mushrooms, Diced Canadian Bacon, Etc."
             ],
             "date_added": "November 11 2020",
-            "date_updated": "November 11 2020"	
+            "date_updated": "November 11 2020"  
         },
         {
             "pk": 584,
             "title": "Loaded Sweet Potato Nachos",
             "publisher": "mitch",
-            "featured_image": "http://127.0.0.1:8000/media/featured_images/584/featured_image.png",
+            "featured_image": "https://nyc3.digitaloceanspaces.com/food2fork/food2fork-static/featured_images/584/featured_image.png",
             "rating": 9,
             "source_url": "http://www.twopeasandtheirpod.com/loaded-sweet-potato-nachos/",
             "description": "N/A",
@@ -81,7 +81,7 @@ Page size = 30
             "date_added": "November 11 2020",
             "date_updated": "November 11 2020"
         },
-	]
+    ]
 }
 ```
 
@@ -131,7 +131,7 @@ https://food2fork.ca/api/recipe/get/?id=9
     "pk": 583,
     "title": "Pizza Potato Skins",
     "publisher": "mitch",
-    "featured_image": "http://127.0.0.1:8000/media/featured_images/583/featured_image.png",
+    "featured_image": "https://nyc3.digitaloceanspaces.com/food2fork/food2fork-static/featured_images/583/featured_image.png",
     "rating": 16,
     "source_url": "http://thepioneerwoman.com/cooking/2013/04/pizza-potato-skins/",
     "description": "N/A",
