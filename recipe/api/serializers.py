@@ -11,6 +11,8 @@ class RecipeSerializer(serializers.ModelSerializer):
 	featured_image 	 = serializers.SerializerMethodField('get_featured_image')
 	date_added = serializers.SerializerMethodField('format_date_added')
 	date_updated = serializers.SerializerMethodField('format_date_updated')
+	long_date_added = serializers.SerializerMethodField('format_long_date_added')
+	long_date_updated = serializers.SerializerMethodField('format_long_date_updated')
 
 	class Meta:
 		model = Recipe
@@ -26,6 +28,8 @@ class RecipeSerializer(serializers.ModelSerializer):
 			'ingredients',
 			'date_added',
 			'date_updated',
+			'long_date_added',
+			'long_date_updated',
 		]
 
 	def get_username_from_publisher(self, recipe):
@@ -44,6 +48,11 @@ class RecipeSerializer(serializers.ModelSerializer):
 	def format_date_updated(self, recipe):
 		return recipe.date_updated.strftime("%B %m %Y")
 
+	def format_long_date_added(self, recipe):
+		return round(recipe.date_added.timestamp())
+
+	def format_long_date_updated(self, recipe):
+		return round(recipe.date_updated.timestamp())
 
 
 
