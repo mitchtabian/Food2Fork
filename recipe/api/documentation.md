@@ -56,7 +56,9 @@ Page size = 30
                 "Miscellaneous Pizza Toppings: Cooked Sausage, Cooked Hamburger, Diced Bell Pepper, Diced Onion, Diced Mushrooms, Diced Canadian Bacon, Etc."
             ],
             "date_added": "November 11 2020",
-            "date_updated": "November 11 2020"	
+            "date_updated": "November 11 2020",
+            "long_date_added": 1606349126,
+            "long_date_updated": 1606349126
         },
         {
             "pk": 584,
@@ -79,7 +81,9 @@ Page size = 30
                 "3 large sweet potatoes, washed and sliced into 1/4-inch rounds"
             ],
             "date_added": "November 11 2020",
-            "date_updated": "November 11 2020"
+            "date_updated": "November 11 2020",
+            "long_date_added": 1606349126,
+            "long_date_updated": 1606349126
         },
 	]
 }
@@ -148,7 +152,9 @@ https://food2fork.ca/api/recipe/get/?id=9
         "Miscellaneous Pizza Toppings: Cooked Sausage, Cooked Hamburger, Diced Bell Pepper, Diced Onion, Diced Mushrooms, Diced Canadian Bacon, Etc."
     ],
     "date_added": "November 11 2020",
-    "date_updated": "November 11 2020"
+    "date_updated": "November 11 2020",
+    "long_date_added": 1606349126,
+    "long_date_updated": 1606349126
 }
 ```
 
